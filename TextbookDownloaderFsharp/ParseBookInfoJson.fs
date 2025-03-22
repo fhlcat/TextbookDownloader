@@ -1,0 +1,2 @@
+﻿module TextbookDownloaderFsharp.ParseBookInfoJson
+

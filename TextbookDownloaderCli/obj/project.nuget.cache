@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Aj831P68Ej8=",
+  "success": true,
+  "projectFilePath": "C:\\source\\TextbookDownloaderCli\\TextbookDownloaderCli\\TextbookDownloaderCli.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\giraf\\.nuget\\packages\\system.commandline\\2.0.0-beta4.22272.1\\system.commandline.2.0.0-beta4.22272.1.nupkg.sha512"
+  ],
+  "logs": []
+}
