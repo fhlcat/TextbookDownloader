@@ -7,11 +7,11 @@ open System
 open System.Reflection
 
 
-[<assembly: System.Reflection.AssemblyCompanyAttribute("TextbookDownloaderCli")>]
+[<assembly: System.Reflection.AssemblyCompanyAttribute("TextbookDownloaderTests")>]
 [<assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")>]
 [<assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")>]
 [<assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+89e4ed815173cbd47105f052aaf74ba827d9442f")>]
-[<assembly: System.Reflection.AssemblyProductAttribute("TextbookDownloaderCli")>]
-[<assembly: System.Reflection.AssemblyTitleAttribute("TextbookDownloaderCli")>]
+[<assembly: System.Reflection.AssemblyProductAttribute("TextbookDownloaderTests")>]
+[<assembly: System.Reflection.AssemblyTitleAttribute("TextbookDownloaderTests")>]
 [<assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")>]
 do()
