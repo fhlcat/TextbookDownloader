@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "TextbookDownloaderCli": {
+      "commandName": "Project",
+      "commandLineArgs": "df \"MAC id=\\\"7F938B205F876FC39BD5FD64A3C82167C86CCC0791528A63420E4F91D84E7836BB9E250BB46E77B08AF04D60689DD948E9C0AEDA61D0B17D\\\",nonce=\\\"1742737502324:BNRPQ45X\\\",mac=\\\"InUcxv3v/pJC9F2OgIBRXINf9VGGSeZhZoWrIjKfO5Q=\\\"\" -f \"C:\\Users\\giraf\\Downloads\\New folder\""
+    }
+  }
+}
