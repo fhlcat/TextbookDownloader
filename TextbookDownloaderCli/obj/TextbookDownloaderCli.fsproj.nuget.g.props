@@ -16,5 +16,6 @@
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgFSharp_Core Condition=" '$(PkgFSharp_Core)' == '' ">C:\Users\giraf\.nuget\packages\fsharp.core\9.0.201</PkgFSharp_Core>
     <PkgSystem_CommandLine Condition=" '$(PkgSystem_CommandLine)' == '' ">C:\Users\giraf\.nuget\packages\system.commandline\2.0.0-beta4.22272.1</PkgSystem_CommandLine>
+    <PkgSerilog Condition=" '$(PkgSerilog)' == '' ">C:\Users\giraf\.nuget\packages\serilog\4.2.0</PkgSerilog>
   </PropertyGroup>
 </Project>

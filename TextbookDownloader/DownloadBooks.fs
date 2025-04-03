@@ -6,6 +6,7 @@ open System.Threading.Tasks
 open TextbookDownloaderCli.Book
 
 let private saveStream (stream: Stream) (fileInfo: FileInfo) =
+    Directory.CreateDirectory fileInfo.DirectoryName |> ignore
     use fileStream = File.Create(fileInfo.FullName)
     stream.CopyTo(fileStream)
 

@@ -3,7 +3,7 @@
 open System.Net.Http
 
 let prepareDownload (auth: string) =
-    use client = new HttpClient()
+    let client = new HttpClient()
     client.DefaultRequestHeaders.Add("x-nd-auth", auth)
 
     let getString (url: string) = client.GetStringAsync(url).Result

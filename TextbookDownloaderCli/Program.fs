@@ -1,5 +1,5 @@
 ﻿open System
-open TextbookDownloaderCli.Cli
+open TextbookDownloaderCli
 
 let args = Environment.GetCommandLineArgs()[1..]
-exit (invoke args)
+exit (Cli.invoke args)

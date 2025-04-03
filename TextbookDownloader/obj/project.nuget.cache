@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3a8WOUCGuNw=",
+  "dgSpecHash": "nyqJj0EmM/E=",
   "success": true,
-  "projectFilePath": "C:\\source\\TextbookDownloaderCli\\TextbookDownloader\\TextbookDownloader.fsproj",
+  "projectFilePath": "C:\\source\\TextbookDownloader\\TextbookDownloader\\TextbookDownloader.fsproj",
   "expectedPackageFiles": [
     "C:\\Users\\giraf\\.nuget\\packages\\fsharp.core\\9.0.201\\fsharp.core.9.0.201.nupkg.sha512"
   ],

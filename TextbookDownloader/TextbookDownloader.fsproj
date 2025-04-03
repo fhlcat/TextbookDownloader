@@ -6,11 +6,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Include="Book.fs" />
-        <Compile Include="Folder.fs" />
-        <Compile Include="DownloadBooksInfo.fs" />
-        <Compile Include="DownloadBooks.fs" />
-        <Compile Include="PrepareDownload.fs" />
+        <Compile Include="Book.fs"/>
+        <Compile Include="Folder.fs"/>
+        <Compile Include="DownloadBooksInfo.fs"/>
+        <Compile Include="DownloadBooks.fs"/>
+        <Compile Include="PrepareDownload.fs"/>
     </ItemGroup>
 
 </Project>

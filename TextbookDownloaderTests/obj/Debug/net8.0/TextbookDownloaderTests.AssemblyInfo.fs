@@ -10,7 +10,7 @@ open System.Reflection
 [<assembly: System.Reflection.AssemblyCompanyAttribute("TextbookDownloaderTests")>]
 [<assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")>]
 [<assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")>]
-[<assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+89e4ed815173cbd47105f052aaf74ba827d9442f")>]
+[<assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+132e2faf2ad2372cf42fbd494b8a16fb8d6c3000")>]
 [<assembly: System.Reflection.AssemblyProductAttribute("TextbookDownloaderTests")>]
 [<assembly: System.Reflection.AssemblyTitleAttribute("TextbookDownloaderTests")>]
 [<assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")>]

@@ -24,7 +24,7 @@ let rec private ofTagAndBook (tagName: string, books_: BookInfoWithTag seq) =
     let textbookWithFirstTagsSkipped = books_ |> Seq.map skipFirstTag
 
     let booksWithFirstTagSkippedAndTagsNotEmpty =
-       textbookWithFirstTagsSkipped |> Seq.filter tagsAreNotEmpty
+        textbookWithFirstTagsSkipped |> Seq.filter tagsAreNotEmpty
 
     let children =
         if Seq.isEmpty booksWithFirstTagSkippedAndTagsNotEmpty then
@@ -38,7 +38,7 @@ let rec private ofTagAndBook (tagName: string, books_: BookInfoWithTag seq) =
       Books = textbookWithFirstTagsSkipped }
 
 /// assuming that all books have at least one tag
-and getFolder (books: BookInfoWithTag seq)=
+and getFolder (books: BookInfoWithTag seq) =
     if (Seq.exists tagsAreEmpty books) then
         failwith "There are books with empty tags"
 

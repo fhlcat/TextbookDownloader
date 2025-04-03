@@ -9,7 +9,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Include="Tests.fs" />
+        <Compile Include="Tests.fs"/>
     </ItemGroup>
 
     <ItemGroup>
@@ -20,7 +20,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\TextbookDownloaderCli\TextbookDownloaderCli.fsproj" />
+        <ProjectReference Include="..\TextbookDownloaderCli\TextbookDownloaderCli.fsproj"/>
     </ItemGroup>
 
 </Project>

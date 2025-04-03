@@ -9,7 +9,8 @@
       "TextbookDownloaderCli/1.0.0": {
         "dependencies": {
           "FSharp.Core": "9.0.201",
-          "System.CommandLine": "2.0.0-beta4.22272.1"
+          "System.CommandLine": "2.0.0-beta4.22272.1",
+          "TextbookDownloader": "1.0.0"
         },
         "runtime": {
           "TextbookDownloaderCli.dll": {}
@@ -112,6 +113,17 @@
             "locale": "zh-Hant"
           }
         }
+      },
+      "TextbookDownloader/1.0.0": {
+        "dependencies": {
+          "FSharp.Core": "9.0.201"
+        },
+        "runtime": {
+          "TextbookDownloader.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -134,6 +146,11 @@
       "sha512": "sha512-1uqED/q2H0kKoLJ4+hI2iPSBSEdTuhfCYADeJrAqERmiGQ2NNacYKRNEQ+gFbU4glgVyK8rxI+ZOe1onEtr/Pg==",
       "path": "system.commandline/2.0.0-beta4.22272.1",
       "hashPath": "system.commandline.2.0.0-beta4.22272.1.nupkg.sha512"
+    },
+    "TextbookDownloader/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

@@ -56,6 +56,19 @@
           }
         }
       },
+      "Serilog/4.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Serilog.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Serilog.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.CommandLine/2.0.0-beta4.22272.1": {
         "type": "package",
         "compile": {
@@ -168,6 +181,31 @@
         "lib/netstandard2.1/zh-Hant/FSharp.Core.resources.dll"
       ]
     },
+    "Serilog/4.2.0": {
+      "sha512": "gmoWVOvKgbME8TYR+gwMf7osROiWAURterc6Rt2dQyX7wtjZYpqFiA/pY6ztjGQKKV62GGCyOcmtP1UKMHgSmA==",
+      "type": "package",
+      "path": "serilog/4.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "icon.png",
+        "lib/net462/Serilog.dll",
+        "lib/net462/Serilog.xml",
+        "lib/net471/Serilog.dll",
+        "lib/net471/Serilog.xml",
+        "lib/net6.0/Serilog.dll",
+        "lib/net6.0/Serilog.xml",
+        "lib/net8.0/Serilog.dll",
+        "lib/net8.0/Serilog.xml",
+        "lib/net9.0/Serilog.dll",
+        "lib/net9.0/Serilog.xml",
+        "lib/netstandard2.0/Serilog.dll",
+        "lib/netstandard2.0/Serilog.xml",
+        "serilog.4.2.0.nupkg.sha512",
+        "serilog.nuspec"
+      ]
+    },
     "System.CommandLine/2.0.0-beta4.22272.1": {
       "sha512": "1uqED/q2H0kKoLJ4+hI2iPSBSEdTuhfCYADeJrAqERmiGQ2NNacYKRNEQ+gFbU4glgVyK8rxI+ZOe1onEtr/Pg==",
       "type": "package",
@@ -221,6 +259,7 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "FSharp.Core >= 9.0.201",
+      "Serilog >= 4.2.0",
       "System.CommandLine >= 2.0.0-beta4.22272.1",
       "TextbookDownloader >= 1.0.0"
     ]
@@ -232,11 +271,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\source\\TextbookDownloaderCli\\TextbookDownloaderCli\\TextbookDownloaderCli.fsproj",
+      "projectUniqueName": "C:\\source\\TextbookDownloader\\TextbookDownloaderCli\\TextbookDownloaderCli.fsproj",
       "projectName": "TextbookDownloaderCli",
-      "projectPath": "C:\\source\\TextbookDownloaderCli\\TextbookDownloaderCli\\TextbookDownloaderCli.fsproj",
+      "projectPath": "C:\\source\\TextbookDownloader\\TextbookDownloaderCli\\TextbookDownloaderCli.fsproj",
       "packagesPath": "C:\\Users\\giraf\\.nuget\\packages\\",
-      "outputPath": "C:\\source\\TextbookDownloaderCli\\TextbookDownloaderCli\\obj\\",
+      "outputPath": "C:\\source\\TextbookDownloader\\TextbookDownloaderCli\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -258,8 +297,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\source\\TextbookDownloaderCli\\TextbookDownloader\\TextbookDownloader.fsproj": {
-              "projectPath": "C:\\source\\TextbookDownloaderCli\\TextbookDownloader\\TextbookDownloader.fsproj"
+            "C:\\source\\TextbookDownloader\\TextbookDownloader\\TextbookDownloader.fsproj": {
+              "projectPath": "C:\\source\\TextbookDownloader\\TextbookDownloader\\TextbookDownloader.fsproj"
             }
           }
         }
@@ -279,6 +318,11 @@
             "include": "Runtime, Compile, Build, Native, Analyzers, BuildTransitive",
             "target": "Package",
             "version": "[9.0.201, )",
+            "generatePathProperty": true
+          },
+          "Serilog": {
+            "target": "Package",
+            "version": "[4.2.0, )",
             "generatePathProperty": true
           },
           "System.CommandLine": {

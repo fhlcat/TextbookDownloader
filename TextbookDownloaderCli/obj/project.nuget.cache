@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "qVk5YWoZJeQ=",
+  "dgSpecHash": "iL+lLt4XEIc=",
   "success": true,
-  "projectFilePath": "C:\\source\\TextbookDownloaderCli\\TextbookDownloaderCli\\TextbookDownloaderCli.fsproj",
+  "projectFilePath": "C:\\source\\TextbookDownloader\\TextbookDownloaderCli\\TextbookDownloaderCli.fsproj",
   "expectedPackageFiles": [
     "C:\\Users\\giraf\\.nuget\\packages\\fsharp.core\\9.0.201\\fsharp.core.9.0.201.nupkg.sha512",
+    "C:\\Users\\giraf\\.nuget\\packages\\serilog\\4.2.0\\serilog.4.2.0.nupkg.sha512",
     "C:\\Users\\giraf\\.nuget\\packages\\system.commandline\\2.0.0-beta4.22272.1\\system.commandline.2.0.0-beta4.22272.1.nupkg.sha512"
   ],
   "logs": []

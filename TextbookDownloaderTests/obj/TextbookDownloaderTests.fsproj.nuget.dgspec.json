@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\source\\TextbookDownloaderCli\\TextbookDownloaderTests\\TextbookDownloaderTests.fsproj": {}
+    "C:\\source\\TextbookDownloader\\TextbookDownloaderTests\\TextbookDownloaderTests.fsproj": {}
   },
   "projects": {
-    "C:\\source\\TextbookDownloaderCli\\TextbookDownloaderCli\\TextbookDownloaderCli.fsproj": {
+    "C:\\source\\TextbookDownloader\\TextbookDownloaderCli\\TextbookDownloaderCli.fsproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\source\\TextbookDownloaderCli\\TextbookDownloaderCli\\TextbookDownloaderCli.fsproj",
+        "projectUniqueName": "C:\\source\\TextbookDownloader\\TextbookDownloaderCli\\TextbookDownloaderCli.fsproj",
         "projectName": "TextbookDownloaderCli",
-        "projectPath": "C:\\source\\TextbookDownloaderCli\\TextbookDownloaderCli\\TextbookDownloaderCli.fsproj",
+        "projectPath": "C:\\source\\TextbookDownloader\\TextbookDownloaderCli\\TextbookDownloaderCli.fsproj",
         "packagesPath": "C:\\Users\\giraf\\.nuget\\packages\\",
-        "outputPath": "C:\\source\\TextbookDownloaderCli\\TextbookDownloaderCli\\obj\\",
+        "outputPath": "C:\\source\\TextbookDownloader\\TextbookDownloaderCli\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,8 +33,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\source\\TextbookDownloaderCli\\TextbookDownloader\\TextbookDownloader.fsproj": {
-                "projectPath": "C:\\source\\TextbookDownloaderCli\\TextbookDownloader\\TextbookDownloader.fsproj"
+              "C:\\source\\TextbookDownloader\\TextbookDownloader\\TextbookDownloader.fsproj": {
+                "projectPath": "C:\\source\\TextbookDownloader\\TextbookDownloader\\TextbookDownloader.fsproj"
               }
             }
           }
@@ -54,6 +54,11 @@
               "include": "Runtime, Compile, Build, Native, Analyzers, BuildTransitive",
               "target": "Package",
               "version": "[9.0.201, )",
+              "generatePathProperty": true
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[4.2.0, )",
               "generatePathProperty": true
             },
             "System.CommandLine": {
@@ -82,14 +87,14 @@
         }
       }
     },
-    "C:\\source\\TextbookDownloaderCli\\TextbookDownloaderTests\\TextbookDownloaderTests.fsproj": {
+    "C:\\source\\TextbookDownloader\\TextbookDownloaderTests\\TextbookDownloaderTests.fsproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\source\\TextbookDownloaderCli\\TextbookDownloaderTests\\TextbookDownloaderTests.fsproj",
+        "projectUniqueName": "C:\\source\\TextbookDownloader\\TextbookDownloaderTests\\TextbookDownloaderTests.fsproj",
         "projectName": "TextbookDownloaderTests",
-        "projectPath": "C:\\source\\TextbookDownloaderCli\\TextbookDownloaderTests\\TextbookDownloaderTests.fsproj",
+        "projectPath": "C:\\source\\TextbookDownloader\\TextbookDownloaderTests\\TextbookDownloaderTests.fsproj",
         "packagesPath": "C:\\Users\\giraf\\.nuget\\packages\\",
-        "outputPath": "C:\\source\\TextbookDownloaderCli\\TextbookDownloaderTests\\obj\\",
+        "outputPath": "C:\\source\\TextbookDownloader\\TextbookDownloaderTests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -111,8 +116,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\source\\TextbookDownloaderCli\\TextbookDownloaderCli\\TextbookDownloaderCli.fsproj": {
-                "projectPath": "C:\\source\\TextbookDownloaderCli\\TextbookDownloaderCli\\TextbookDownloaderCli.fsproj"
+              "C:\\source\\TextbookDownloader\\TextbookDownloaderCli\\TextbookDownloaderCli.fsproj": {
+                "projectPath": "C:\\source\\TextbookDownloader\\TextbookDownloaderCli\\TextbookDownloaderCli.fsproj"
               }
             }
           }
@@ -175,14 +180,14 @@
         }
       }
     },
-    "C:\\source\\TextbookDownloaderCli\\TextbookDownloader\\TextbookDownloader.fsproj": {
+    "C:\\source\\TextbookDownloader\\TextbookDownloader\\TextbookDownloader.fsproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\source\\TextbookDownloaderCli\\TextbookDownloader\\TextbookDownloader.fsproj",
+        "projectUniqueName": "C:\\source\\TextbookDownloader\\TextbookDownloader\\TextbookDownloader.fsproj",
         "projectName": "TextbookDownloader",
-        "projectPath": "C:\\source\\TextbookDownloaderCli\\TextbookDownloader\\TextbookDownloader.fsproj",
+        "projectPath": "C:\\source\\TextbookDownloader\\TextbookDownloader\\TextbookDownloader.fsproj",
         "packagesPath": "C:\\Users\\giraf\\.nuget\\packages\\",
-        "outputPath": "C:\\source\\TextbookDownloaderCli\\TextbookDownloader\\obj\\",
+        "outputPath": "C:\\source\\TextbookDownloader\\TextbookDownloader\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
