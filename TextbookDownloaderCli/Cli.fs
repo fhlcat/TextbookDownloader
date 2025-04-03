@@ -26,18 +26,23 @@ let downloadFolderCommandHandler (auth: string) (threads: int) (folder: string) 
     let getString, getStream = prepareDownload auth
 
     log "Retrieving books information..."
-    let books = downloadBooksInfoWithTagSeq getString
+    let allBooks = downloadBooksInfoWithTagSeq getString
     log "Retrieving books information completed."
 
     log "Parsing folders information..."
-    let folders = getFolder books
+    let folders = getFolder allBooks
     log "Parsing folders information completed."
 
     let selectedFolder = askForFolder folders
-
     let directoryInfo = DirectoryInfo(folder)
 
-    downloadBooks getStream threads directoryInfo events selectedFolder.Books
+    let options =
+        { MaxThreads = threads
+          DownloadEvents = events
+          DirectoryInfo = directoryInfo
+          Books = selectedFolder.Books }
+
+    downloadBooks getStream options
 
 let private downloadFolderCommand =
     let downloadFolderCommand = Command "DownloadFolder"

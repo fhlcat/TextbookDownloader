@@ -46,7 +46,11 @@ let rec private getBookWithFileInfo (directoryInfo: DirectoryInfo) (book: BookIn
 
         getBookWithFileInfo newDirectoryInfo newBook
 
-let private downloadABook (downloadEvents: DownloadBookEvents) getStream (book: TextbookWithFileInfo) =
+let private downloadABook
+    (downloadEvents: DownloadBookEvents)
+    (getStream: string -> Stream)
+    (book: TextbookWithFileInfo)
+    =
     match downloadEvents.DownloadStarted with
     | Action action -> action book.Textbook
     | None -> ()
@@ -58,18 +62,20 @@ let private downloadABook (downloadEvents: DownloadBookEvents) getStream (book: 
     | Action action -> action book.Textbook
     | None -> ()
 
+type DownloadOptions =
+    { MaxThreads: int
+      DirectoryInfo: DirectoryInfo
+      DownloadEvents: DownloadBookEvents
+      Books: BookInfoWithTag seq }
+
 let downloadBooks
     (getStream: string -> Stream)
-    (maxThreads: int)
-    (directoryInfo: DirectoryInfo)
-    (downloadEvents: DownloadBookEvents)
-    (books: BookInfoWithTag seq)
+    (options: DownloadOptions)
     =
 
-    let downloadBookByInfo = downloadABook downloadEvents getStream
-    let getBookWithFileInfo_ = getBookWithFileInfo directoryInfo
-    let downloadBook = getBookWithFileInfo_ >> downloadBookByInfo
-    let getDownloadAction book = fun () -> downloadBook book
-    let downloadActions = Seq.map getDownloadAction books
+    let downloadBookByInfo = downloadABook options.DownloadEvents getStream
+    let downloadABook_ = getBookWithFileInfo options.DirectoryInfo >> downloadBookByInfo
+    let getDownloadAction book = fun () -> downloadABook_ book
+    let downloadActions = Seq.map getDownloadAction options.Books
 
-    DoParallelly maxThreads downloadActions
+    DoParallelly options.MaxThreads downloadActions

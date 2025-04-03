@@ -1,0 +1,14 @@
+C:\source\TextbookDownloader\TextbookDownloader\bin\Debug\net8.0\TextbookDownloader.deps.json
+C:\source\TextbookDownloader\TextbookDownloader\bin\Debug\net8.0\TextbookDownloader.dll
+C:\source\TextbookDownloader\TextbookDownloader\bin\Debug\net8.0\TextbookDownloader.pdb
+C:\source\TextbookDownloader\TextbookDownloader\bin\Debug\net8.0\TextbookDownloader.xml
+C:\source\TextbookDownloader\TextbookDownloader\obj\Debug\net8.0\TextbookDownloader.fsproj.AssemblyReference.cache
+C:\source\TextbookDownloader\TextbookDownloader\obj\Debug\net8.0\TextbookDownloader.AssemblyInfoInputs.cache
+C:\source\TextbookDownloader\TextbookDownloader\obj\Debug\net8.0\TextbookDownloader.AssemblyInfo.fs
+C:\source\TextbookDownloader\TextbookDownloader\obj\Debug\net8.0\TextbookDownloader.fsproj.CoreCompileInputs.cache
+C:\source\TextbookDownloader\TextbookDownloader\obj\Debug\net8.0\TextbookDownloader.sourcelink.json
+C:\source\TextbookDownloader\TextbookDownloader\obj\Debug\net8.0\TextbookDownloader.dll
+C:\source\TextbookDownloader\TextbookDownloader\obj\Debug\net8.0\refint\TextbookDownloader.dll
+C:\source\TextbookDownloader\TextbookDownloader\obj\Debug\net8.0\TextbookDownloader.xml
+C:\source\TextbookDownloader\TextbookDownloader\obj\Debug\net8.0\TextbookDownloader.pdb
+C:\source\TextbookDownloader\TextbookDownloader\obj\Debug\net8.0\ref\TextbookDownloader.dll

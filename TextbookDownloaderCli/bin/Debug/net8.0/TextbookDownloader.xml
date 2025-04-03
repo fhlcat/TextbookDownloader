@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>TextbookDownloader</name></assembly>
+<members>
+<member name="M:TextbookDownloaderCli.Folder.getFolder(System.Collections.Generic.IEnumerable{TextbookDownloaderCli.Book.BookInfoWithTag})">
+<summary>
+ assuming that all books have at least one tag
+</summary>
+</member>
+</members>
+</doc>
