@@ -1,7 +1,7 @@
 ﻿namespace TextbookDownloaderCli.CliTools
 
 open System
-open TextbookDownloaderCli.Folder
+open TextbookDownloaderCli.ParseFolders
 
 module Folder =
     let private folderPrompt index (folder: Folder) =

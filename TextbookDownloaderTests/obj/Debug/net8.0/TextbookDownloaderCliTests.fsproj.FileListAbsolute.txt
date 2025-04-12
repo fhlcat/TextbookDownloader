@@ -1,3 +1,0 @@
-c:\source\TextbookDownloaderCli\TextbookDownloaderCliTests\bin\Debug\net8.0\CoverletSourceRootsMapping_TextbookDownloaderCliTests
-c:\source\TextbookDownloaderCli\TextbookDownloaderCliTests\obj\Debug\net8.0\TextbookDownloaderCliTests.AssemblyInfoInputs.cache
-c:\source\TextbookDownloaderCli\TextbookDownloaderCliTests\obj\Debug\net8.0\TextbookDownloaderCliTests.AssemblyInfo.fs

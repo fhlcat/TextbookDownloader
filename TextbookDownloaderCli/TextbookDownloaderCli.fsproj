@@ -8,8 +8,8 @@
 
     <ItemGroup>
         <Compile Include="CliTools.fs"/>
-        <Compile Include="Cli.fs"/>
-        <Compile Include="Program.fs"/>
+        <Compile Include="CliHandlers.fs" />
+        <Compile Include="Program.fs" />
     </ItemGroup>
 
     <ItemGroup>
