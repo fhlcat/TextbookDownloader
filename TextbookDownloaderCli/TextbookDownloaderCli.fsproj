@@ -7,13 +7,14 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Include="CliTools.fs"/>
-        <Compile Include="CliHandlers.fs" />
-        <Compile Include="Program.fs" />
+        <Compile Include="CliTools\Folder.fs"/>
+        <Compile Include="CliTools\Commandline.fs"/>
+        <Compile Include="CliHandlers.fs"/>
+        <Compile Include="Program.fs"/>
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Serilog" Version="4.2.0" />
+        <PackageReference Include="Serilog" Version="4.2.0"/>
         <PackageReference Include="System.CommandLine" Version="2.0.0-beta4.22272.1"/>
     </ItemGroup>
 

@@ -6,16 +6,14 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Include="ParseFolders.fs" />
-        <Compile Include="PrepareDownload.fs"/>
-        <Compile Include="Book\SortTags.fs" />
-        <Compile Include="Book\ParseBooksInfo.fs" />
-        <Compile Include="Book\DownloadBooksInfo.fs" />
-        <Compile Include="Book\DownloadBooks.fs" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\TagHelper\TagHelper.csproj" />
+        <Compile Include="Info\TextbookInfo.fs"/>
+        <Compile Include="Info\SortTags.fs"/>
+        <Compile Include="Info\PrepareDownload.fs"/>
+        <Compile Include="Info\DownloadBooksInfo.fs"/>
+        <Compile Include="Info\Folder.fs"/>
+        <Compile Include="Info\GatherFolderInfo.fs"/>
+        <Compile Include="Download\DownloadBooks.fs"/>
+        <Content Include="example\tch_material_tag.json" />
     </ItemGroup>
 
 </Project>
