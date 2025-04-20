@@ -1,8 +1,6 @@
 ﻿module TextbookDownloaderCli.DownloadBooks
 
-open System
 open System.IO
-open System.Threading.Tasks
 open TextbookDownloader.Book.TextbookInfo
 open TextbookDownloader.Download.PrepareDownload
 
@@ -11,22 +9,16 @@ let private saveStream (stream: Stream) (fileInfo: FileInfo) =
     use fileStream = File.Create(fileInfo.FullName)
     stream.CopyTo(fileStream)
 
-let private DoParallelly maxThreads (actions: (unit -> unit) seq) =
-    Parallel.Invoke(
-        ParallelOptions(MaxDegreeOfParallelism = maxThreads),
-        actions |> Seq.map (fun action -> Action action) |> Array.ofSeq
-    )
-
-type DownloadBookEvent =
-    | Action of (TextbookInfo -> unit)
-    | None
+type DownloadBookEvents =
+    { DownloadStarted: Option<TextbookInfo -> unit>
+      DownloadFinished: Option<TextbookInfo -> unit>
+      Waiting: Option<int -> unit> }
 
 type BooksDownloadOptions =
-    { MaxThreads: int
+    { interval: int
       DirectoryInfo: DirectoryInfo
       Auth: string
-      DownloadStarted: DownloadBookEvent
-      DownloadFinished: DownloadBookEvent }
+      Events: DownloadBookEvents }
 
 let private createFileInfo (directory: DirectoryInfo) (book: TextbookInfo) =
     FileInfo(
@@ -37,18 +29,23 @@ let private createFileInfo (directory: DirectoryInfo) (book: TextbookInfo) =
                   [| (book.Name + ".pdf") |] ]
         )
     )
+    
+let callEventIfExists event arg =
+    match event with
+    | Some action -> action arg
+    | None -> ()
 
 let downloadBooks (options: BooksDownloadOptions) (books: TextbookInfo seq) =
     let _, getStream = prepareDownload options.Auth
     let getFileInfo = createFileInfo options.DirectoryInfo
 
     for book in books do
-        match options.DownloadStarted with
-        | Action action -> action book
-        | None -> ()
+        callEventIfExists options.Events.DownloadStarted book
 
         saveStream (getStream book.Url) (getFileInfo book)
+        
+        callEventIfExists options.Events.Waiting options.interval
+        if options.interval <> 0 then
+            System.Threading.Thread.Sleep options.interval
 
-        match options.DownloadFinished with
-        | Action action -> action book
-        | None -> ()
+        callEventIfExists options.Events.DownloadFinished book

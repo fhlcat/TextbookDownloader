@@ -23,30 +23,32 @@ let private getBookName (bookElement: JsonElement) = bookElement
 let private formatIsPdf (tiItemElement: JsonElement) =
     tiItemElement.GetProperty("ti_format").GetString() = "pdf"
 
+let private ofJson (json: string) =
+    let document = JsonDocument.Parse json
+    let rootElement = document.RootElement
+    let tagElements = rootElement.GetProperty("tag_list").EnumerateArray()
+
+    let parseBookUrl (bookElement: JsonElement) =
+        let pdfTiItemElement =
+            bookElement.GetProperty("ti_items").EnumerateArray() |> Seq.find formatIsPdf
+
+        let urlTiStorageElement =
+            pdfTiItemElement.GetProperty("ti_storages").EnumerateArray() |> Seq.head
+
+        urlTiStorageElement.GetString()
+
+    let parseTagName (tagElement: JsonElement) =
+        tagElement.GetProperty("tag_name").GetString()
+
+    { Name = rootElement.GetProperty("global_title").GetProperty("zh-CN").GetString()
+      Url = parseBookUrl rootElement
+      Tags = tagElements |> Seq.map parseTagName |> Seq.filter (isNull >> not) }    
+
 /// <summary>
 /// Remind that tags are not sorted.
 /// </summary>
 let tryOfJson (json: string) =
     try
-        let document = JsonDocument.Parse json
-        let rootElement = document.RootElement
-        let tagElements = rootElement.GetProperty("tag_list").EnumerateArray()
-
-        let parseBookUrl (bookElement: JsonElement) =
-            let pdfTiItemElement =
-                bookElement.GetProperty("ti_items").EnumerateArray() |> Seq.find formatIsPdf
-
-            let urlTiStorageElement =
-                pdfTiItemElement.GetProperty("ti_storages").EnumerateArray() |> Seq.head
-
-            urlTiStorageElement.GetString()
-
-        let parseTagName (tagElement: JsonElement) =
-            tagElement.GetProperty("tag_name").GetString()
-
-        Some
-            { Name = rootElement.GetProperty("global_title").GetProperty("zh-CN").GetString()
-              Url = parseBookUrl rootElement
-              Tags = tagElements |> Seq.map parseTagName |> Seq.filter (isNull >> not) }
+       Some (ofJson json) 
     with _ ->
         None

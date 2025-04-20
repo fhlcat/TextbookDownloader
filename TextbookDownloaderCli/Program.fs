@@ -7,10 +7,10 @@ open TextbookDownloaderCli.CliHandlers
 let authFilePathArgument =
     Argument<string>("auth-file-path", "Path to a txt file that contains x-nd-auth value in the headers")
 
-let threadsOption =
-    let option = Option<int>("--threads", "Number of threads to download")
-    option.AddAlias "-t"
-    option.SetDefaultValue 4
+let intervalOption =
+    let option = Option<int>("--interval", "Time to wait between each download in milliseconds")
+    option.AddAlias "-i"
+    option.SetDefaultValue 500
     option
 
 let outputPathOption =
@@ -23,9 +23,9 @@ let private downloadFolderCommand =
     let command = Command "DownloadFolder"
     command.AddAlias "df"
     command.AddArgument authFilePathArgument
-    command.AddOption threadsOption
+    command.AddOption intervalOption
     command.AddOption outputPathOption
-    command.SetHandler(downloadFolderCommandHandler, authFilePathArgument, threadsOption, outputPathOption)
+    command.SetHandler(downloadFolderCommandHandler, authFilePathArgument, intervalOption, outputPathOption)
 
     command
 

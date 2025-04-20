@@ -13,11 +13,14 @@ let downloadBooksInfo auth =
         |> Seq.concat
         |> Array.ofSeq
 
+    let downloadSingleBookInfoJson (bookId: string) =
+        getString $"https://s-file-1.ykt.cbern.com.cn/zxx/ndrv2/resources/tch_material/details/{bookId}.json" |> Some
+        
     let tryDownloadSingleBookInfoJson (bookId: string) =
-        try 
-            getString $"https://s-file-1.ykt.cbern.com.cn/zxx/ndrv2/resources/tch_material/details/{bookId}.json" |> Some
+        try
+            downloadSingleBookInfoJson bookId
         with
-        | _ -> None
+        | :? System.Net.Http.HttpRequestException -> None
 
     let sort =
         getString "https://s-file-1.ykt.cbern.com.cn/zxx/ndrs/tags/tch_material_tag.json"

@@ -11,7 +11,7 @@ and FolderChildren =
     | FolderChildren of Lazy<Folder seq>
     | EmptyFolderChildren
 
-let rec private tryOfBooksInformationRec (booksInformation: TextbookInfo seq) (tagDepth: int) =
+let rec private ofBooksInformationRec (booksInformation: TextbookInfo seq) (tagDepth: int) =
     booksInformation
     |> Seq.filter (fun book -> Seq.length book.Tags > tagDepth)
     |> Seq.groupBy (fun book -> Seq.item tagDepth book.Tags)
@@ -22,7 +22,7 @@ let rec private tryOfBooksInformationRec (booksInformation: TextbookInfo seq) (t
             if tagDepth = Seq.length (Seq.head books).Tags then
                 EmptyFolderChildren
             else
-                let children = tryOfBooksInformationRec books (tagDepth + 1)
+                let children = ofBooksInformationRec books (tagDepth + 1)
                 if Seq.isEmpty children then
                     EmptyFolderChildren
                 else
@@ -33,4 +33,4 @@ let rec private tryOfBooksInformationRec (booksInformation: TextbookInfo seq) (t
           Books = books })
 
 let ofBooksInfo (booksInformation: TextbookInfo seq) =
-    tryOfBooksInformationRec booksInformation 0
+    ofBooksInformationRec booksInformation 0
