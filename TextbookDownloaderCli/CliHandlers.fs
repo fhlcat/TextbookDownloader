@@ -9,7 +9,7 @@ open TextbookDownloaderCli.DownloadBooks
 
 let downloadFolderCommandHandler (authFilePath: string) (threads: int) (outputPath: string) =
     let log (message: string) = Console.WriteLine message
-    let folders = gatherFolderInfo log authFilePath
+    let folders = gatherFoldersInfo log authFilePath
     let selectedFolder = askForFolder folders
     let auth = File.ReadAllText authFilePath
 

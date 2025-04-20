@@ -1,7 +1,8 @@
 ﻿module TextbookDownloaderCli.CliTools.Folder
 
 open System
-open TextbookDownloader.Folder
+open System.Text.RegularExpressions
+open TextbookDownloader.Folders
 
 let private folderPrompt index (folder: Folder) =
     match folder.Children with
@@ -24,11 +25,10 @@ let rec askForFolder (folders: Folder seq) : Folder =
     if isDirectParseSuccessful then
         Seq.item directParseResult folders
     else
-        let isWithSuffixParseSuccessful, withSuffixParseResult =
-            Int32.TryParse(input[.. input.Length - 1])
-
-        if isWithSuffixParseSuccessful then
-            let selectedFolder = Seq.item withSuffixParseResult folders
+        let matchObject = Regex.Match(input, @"^(\d+)>$")
+        if matchObject.Success then
+            let selectedFolderIndex = Int32.Parse(matchObject.Groups[1].Value)
+            let selectedFolder = Seq.item selectedFolderIndex folders
 
             match selectedFolder.Children with
             | EmptyFolderChildren ->

@@ -1,4 +1,4 @@
-﻿module TextbookDownloader.Folder
+﻿module TextbookDownloader.Folders
 
 open TextbookDownloader.Book.TextbookInfo
 

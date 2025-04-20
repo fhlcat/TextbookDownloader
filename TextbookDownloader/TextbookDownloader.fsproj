@@ -10,7 +10,7 @@
         <Compile Include="Info\SortTags.fs"/>
         <Compile Include="Info\PrepareDownload.fs"/>
         <Compile Include="Info\DownloadBooksInfo.fs"/>
-        <Compile Include="Info\Folder.fs"/>
+        <Compile Include="Info\Folders.fs" />
         <Compile Include="Info\GatherFolderInfo.fs"/>
         <Compile Include="Download\DownloadBooks.fs"/>
         <Content Include="example\tch_material_tag.json" />
