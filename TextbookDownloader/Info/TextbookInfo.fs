@@ -26,23 +26,27 @@ let private formatIsPdf (tiItemElement: JsonElement) =
 /// <summary>
 /// Remind that tags are not sorted.
 /// </summary>
-let ofJson (json: string) =
-    let document = JsonDocument.Parse json
-    let rootElement = document.RootElement
-    let tagElements = rootElement.GetProperty("tag_list").EnumerateArray()
+let tryOfJson (json: string) =
+    try
+        let document = JsonDocument.Parse json
+        let rootElement = document.RootElement
+        let tagElements = rootElement.GetProperty("tag_list").EnumerateArray()
 
-    let parseBookUrl (bookElement: JsonElement) =
-        let pdfTiItemElement =
-            bookElement.GetProperty("ti_items").EnumerateArray() |> Seq.find formatIsPdf
+        let parseBookUrl (bookElement: JsonElement) =
+            let pdfTiItemElement =
+                bookElement.GetProperty("ti_items").EnumerateArray() |> Seq.find formatIsPdf
 
-        let urlTiStorageElement =
-            pdfTiItemElement.GetProperty("ti_storages").EnumerateArray() |> Seq.head
+            let urlTiStorageElement =
+                pdfTiItemElement.GetProperty("ti_storages").EnumerateArray() |> Seq.head
 
-        urlTiStorageElement.GetString()
+            urlTiStorageElement.GetString()
 
-    let parseTagName (tagElement: JsonElement) =
-        tagElement.GetProperty("tag_name").GetString()
+        let parseTagName (tagElement: JsonElement) =
+            tagElement.GetProperty("tag_name").GetString()
 
-    { Name = rootElement.GetProperty("global_title").GetProperty("zh-CN").GetString()
-      Url = parseBookUrl rootElement
-      Tags = tagElements |> Seq.map parseTagName |> Seq.filter (isNull >> not) }
+        Some
+            { Name = rootElement.GetProperty("global_title").GetProperty("zh-CN").GetString()
+              Url = parseBookUrl rootElement
+              Tags = tagElements |> Seq.map parseTagName |> Seq.filter (isNull >> not) }
+    with _ ->
+        None

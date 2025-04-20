@@ -15,27 +15,28 @@ let private toSeq (jsonElement: JsonElement) =
 
             if existTagName then
                 yield tagName.GetString()
-                
+
             let hierarchiesElement = element.GetProperty("hierarchies")
+
             if hierarchiesElement.ValueKind <> JsonValueKind.Null then
                 let childrenElement = hierarchiesElement.EnumerateArray() |> Seq.head
+
                 for child in childrenElement.GetProperty("children").EnumerateArray() do
                     queue.Enqueue(child)
     }
 
-let private compareTags (json: string) (tag1: string) (tag2: string) =
+let sortTags (json: string) =
     let document = JsonDocument.Parse json
     let rootElement = document.RootElement
-    let tagsSeq = toSeq rootElement
+    let tagsArray = toSeq rootElement |> Array.ofSeq |> Array.distinct
 
-    let result = Seq.tryFind (fun tag -> (tag = tag1 || tag = tag2)) tagsSeq
+    let sort (tags: string seq) =
+        tags
+        |> Seq.filter (fun tag -> Seq.exists ((=) tag) tagsArray)
+        |> Seq.map (fun tag -> (tag, Array.findIndex ((=) tag) tagsArray))
+        |> Seq.sortBy snd
+        |> Seq.map fst
 
-    match result with
-    | None -> 0
-    | Some value -> if value = tag1 then 1 else -1
-
-let sortTags (json: string) (book: TextbookInfo) =
-    let comparer = compareTags json
-
-    { book with
-        Tags = Seq.sortWith comparer book.Tags }
+    fun (book: TextbookInfo) ->
+        { book with
+            Tags = sort book.Tags |> Array.ofSeq }

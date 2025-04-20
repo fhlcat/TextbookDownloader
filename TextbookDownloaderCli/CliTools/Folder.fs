@@ -26,6 +26,7 @@ let rec askForFolder (folders: Folder seq) : Folder =
         Seq.item directParseResult folders
     else
         let matchObject = Regex.Match(input, @"^(\d+)>$")
+
         if matchObject.Success then
             let selectedFolderIndex = Int32.Parse(matchObject.Groups[1].Value)
             let selectedFolder = Seq.item selectedFolderIndex folders
