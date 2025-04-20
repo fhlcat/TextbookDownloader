@@ -7,10 +7,11 @@ open TextbookDownloaderCli.GatherFolderInfo
 open TextbookDownloaderCli.CliTools.Folder
 open TextbookDownloaderCli.DownloadBooks
 
-let downloadFolderCommandHandler (auth: string) (threads: int) (outputPath: string) =
+let downloadFolderCommandHandler (authFilePath: string) (threads: int) (outputPath: string) =
     let log (message: string) = Console.WriteLine message
-    let folders = gatherFolderInfo log auth
+    let folders = gatherFolderInfo log authFilePath
     let selectedFolder = askForFolder folders
+    let auth = File.ReadAllText authFilePath
 
     downloadBooks
         { MaxThreads = threads

@@ -11,17 +11,16 @@ let private toSeq (jsonElement: JsonElement) =
     seq {
         while (queue.Count > 0) do
             let element = queue.Dequeue()
-            let isSuccessful, tagName = element.TryGetProperty("tag_name")
+            let existTagName, tagName = element.TryGetProperty("tag_name")
 
-            if isSuccessful then
+            if existTagName then
                 yield tagName.GetString()
-
-            let children =
-                let childrenElement = element.GetProperty("hierarchies").EnumerateArray() |> Seq.head
-                childrenElement.GetProperty("children").EnumerateArray()
-            
-            for child in children do
-                queue.Enqueue(child)
+                
+            let hierarchiesElement = element.GetProperty("hierarchies")
+            if hierarchiesElement.ValueKind <> JsonValueKind.Null then
+                let childrenElement = hierarchiesElement.EnumerateArray() |> Seq.head
+                for child in childrenElement.GetProperty("children").EnumerateArray() do
+                    queue.Enqueue(child)
     }
 
 let private compareTags (json: string) (tag1: string) (tag2: string) =

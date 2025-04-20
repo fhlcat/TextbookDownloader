@@ -1,11 +1,11 @@
-﻿module TextbookDownloaderCli
+﻿module TextbookDownloaderCli.Program
 
 open System
 open System.CommandLine
 open TextbookDownloaderCli.CliHandlers
 
-let authArgument =
-    Argument<string>("authFile", "a txt file that contains x-nd-auth value in the headers")
+let authFilePathArgument =
+    Argument<string>("auth-file-path", "Path to a txt file that contains x-nd-auth value in the headers")
 
 let threadsOption =
     let option = Option<int>("--threads", "Number of threads to download")
@@ -22,10 +22,10 @@ let outputPathOption =
 let private downloadFolderCommand =
     let command = Command "DownloadFolder"
     command.AddAlias "df"
-    command.AddArgument authArgument
+    command.AddArgument authFilePathArgument
     command.AddOption threadsOption
     command.AddOption outputPathOption
-    command.SetHandler(downloadFolderCommandHandler, authArgument, threadsOption, outputPathOption)
+    command.SetHandler(downloadFolderCommandHandler, authFilePathArgument, threadsOption, outputPathOption)
 
     command
 
