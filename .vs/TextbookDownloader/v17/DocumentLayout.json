@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\fhlcat\\Source\\TextbookDownloader\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6BF682A5-FE4B-43BE-9510-3F4F2B6D180E}|TextbookDownloader\\TextbookDownloader.fsproj|c:\\users\\fhlcat\\source\\textbookdownloader\\textbookdownloader\\info\\folders.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}",
+      "RelativeMoniker": "D:0:0:{6BF682A5-FE4B-43BE-9510-3F4F2B6D180E}|TextbookDownloader\\TextbookDownloader.fsproj|solutionrelative:textbookdownloader\\info\\folders.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BF682A5-FE4B-43BE-9510-3F4F2B6D180E}|TextbookDownloader\\TextbookDownloader.fsproj|c:\\users\\fhlcat\\source\\textbookdownloader\\textbookdownloader\\info\\textbookinfo.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}",
+      "RelativeMoniker": "D:0:0:{6BF682A5-FE4B-43BE-9510-3F4F2B6D180E}|TextbookDownloader\\TextbookDownloader.fsproj|solutionrelative:textbookdownloader\\info\\textbookinfo.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BF682A5-FE4B-43BE-9510-3F4F2B6D180E}|TextbookDownloader\\TextbookDownloader.fsproj|c:\\users\\fhlcat\\source\\textbookdownloader\\textbookdownloader\\info\\sorttags.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}",
+      "RelativeMoniker": "D:0:0:{6BF682A5-FE4B-43BE-9510-3F4F2B6D180E}|TextbookDownloader\\TextbookDownloader.fsproj|solutionrelative:textbookdownloader\\info\\sorttags.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F3CA941E-20D2-4761-9D97-771F4EA6CAFC}|TextbookDownloaderCli\\TextbookDownloaderCli.fsproj|c:\\users\\fhlcat\\source\\textbookdownloader\\textbookdownloadercli\\program.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}",
       "RelativeMoniker": "D:0:0:{F3CA941E-20D2-4761-9D97-771F4EA6CAFC}|TextbookDownloaderCli\\TextbookDownloaderCli.fsproj|solutionrelative:textbookdownloadercli\\program.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}"
     },
@@ -41,6 +53,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Folders.fs",
+              "DocumentMoniker": "C:\\Users\\fhlcat\\Source\\TextbookDownloader\\TextbookDownloader\\Info\\Folders.fs",
+              "RelativeDocumentMoniker": "TextbookDownloader\\Info\\Folders.fs",
+              "ToolTip": "C:\\Users\\fhlcat\\Source\\TextbookDownloader\\TextbookDownloader\\Info\\Folders.fs",
+              "RelativeToolTip": "TextbookDownloader\\Info\\Folders.fs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-04-20T11:39:32.005Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TextbookInfo.fs",
+              "DocumentMoniker": "C:\\Users\\fhlcat\\Source\\TextbookDownloader\\TextbookDownloader\\Info\\TextbookInfo.fs",
+              "RelativeDocumentMoniker": "TextbookDownloader\\Info\\TextbookInfo.fs",
+              "ToolTip": "C:\\Users\\fhlcat\\Source\\TextbookDownloader\\TextbookDownloader\\Info\\TextbookInfo.fs",
+              "RelativeToolTip": "TextbookDownloader\\Info\\TextbookInfo.fs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-04-20T11:38:53.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SortTags.fs",
+              "DocumentMoniker": "C:\\Users\\fhlcat\\Source\\TextbookDownloader\\TextbookDownloader\\Info\\SortTags.fs",
+              "RelativeDocumentMoniker": "TextbookDownloader\\Info\\SortTags.fs",
+              "ToolTip": "C:\\Users\\fhlcat\\Source\\TextbookDownloader\\TextbookDownloader\\Info\\SortTags.fs",
+              "RelativeToolTip": "TextbookDownloader\\Info\\SortTags.fs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-04-20T11:38:52.586Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Program.fs",
               "DocumentMoniker": "C:\\Users\\fhlcat\\Source\\TextbookDownloader\\TextbookDownloaderCli\\Program.fs",
               "RelativeDocumentMoniker": "TextbookDownloaderCli\\Program.fs",
@@ -53,19 +104,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "PrepareDownload.fs",
               "DocumentMoniker": "C:\\source\\TextbookDownloader\\TextbookDownloader\\PrepareDownload.fs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\source\\TextbookDownloader\\TextbookDownloader\\PrepareDownload.fs",
               "ToolTip": "C:\\source\\TextbookDownloader\\TextbookDownloader\\PrepareDownload.fs",
               "RelativeToolTip": "..\\..\\..\\..\\source\\TextbookDownloader\\TextbookDownloader\\PrepareDownload.fs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-04-12T12:05:19.497Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Cli.fs",
               "DocumentMoniker": "C:\\source\\TextbookDownloader\\TextbookDownloaderCli\\Cli.fs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\source\\TextbookDownloader\\TextbookDownloaderCli\\Cli.fs",

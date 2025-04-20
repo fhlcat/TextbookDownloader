@@ -20,7 +20,7 @@ let downloadBooksInfo auth =
         try
             downloadSingleBookInfoJson bookId
         with
-        | :? System.Net.Http.HttpRequestException -> None
+        | _ -> None
 
     let sort =
         getString "https://s-file-1.ykt.cbern.com.cn/zxx/ndrs/tags/tch_material_tag.json"
